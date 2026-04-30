@@ -82,7 +82,7 @@ const Hero = ({ onOpenModal }) => {
         </p>
         <div className="hero-element mt-10 flex flex-wrap gap-4">
           <Button onClick={onOpenModal}>Deploy Your Solution</Button>
-          <Button primary={false}>Explore Architecture</Button>
+          <Button primary={false} onClick={() => document.getElementById('automations')?.scrollIntoView({ behavior: 'smooth' })}>Explore Architecture</Button>
         </div>
       </div>
     </section>
