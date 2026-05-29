@@ -5,7 +5,7 @@ import { supabase } from '../lib/supabase';
 import Button from '../components/Button';
 
 const LoginPage = () => {
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -17,22 +17,20 @@ const LoginPage = () => {
     setError('');
 
     try {
-      // Query the 'users' table
-      const { data, error } = await supabase
-        .from('users')
-        .select('*')
-        .eq('username', username)
-        .eq('password', password)
-        .single();
+      // Authenticate using Supabase Auth
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email,
+        password
+      });
 
-      if (error || !data) {
-        throw new Error('Invalid credentials');
+      if (error || !data?.user) {
+        throw new Error(error?.message || 'Invalid credentials');
       }
 
-      // Very simple local session for this specific build
+      // Keep local session for compatibility with layout check
       localStorage.setItem('logiccraft_admin_session', JSON.stringify({
-        id: data.id,
-        username: data.username,
+        id: data.user.id,
+        username: data.user.email,
         timestamp: new Date().getTime()
       }));
 
@@ -71,12 +69,12 @@ const LoginPage = () => {
               <User size={18} className="text-slate-500" />
             </div>
             <input
-              type="text"
+              type="email"
               required
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="w-full bg-void-black border border-slate-700 rounded-xl pl-12 pr-4 py-3 text-white focus:outline-none focus:border-electric-cyan transition-colors font-mono text-sm"
-              placeholder="USERNAME"
+              placeholder="EMAIL"
             />
           </div>
 

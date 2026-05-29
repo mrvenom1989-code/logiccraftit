@@ -1,19 +1,25 @@
 import React, { useEffect } from 'react';
 import { Outlet, useNavigate, useLocation, Link } from 'react-router-dom';
 import { LayoutDashboard, Inbox, FileText, FileSpreadsheet, LogOut, Users, TrendingUp } from 'lucide-react';
+import { supabase } from '../lib/supabase';
 
 const AdminLayout = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
-    const session = localStorage.getItem('logiccraft_admin_session');
-    if (!session) {
-      navigate('/admin/login');
-    }
+    const checkSession = async () => {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session) {
+        localStorage.removeItem('logiccraft_admin_session');
+        navigate('/admin/login');
+      }
+    };
+    checkSession();
   }, [navigate]);
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
     localStorage.removeItem('logiccraft_admin_session');
     navigate('/admin/login');
   };
