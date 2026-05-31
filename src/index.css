@@ -24,3 +24,33 @@
 .link-lift:hover {
   transform: translateY(-1px);
 }
+
+/* Cyber Luxe Global Noise Overlay */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.04;
+}
+
+/* Scrollbar customization for the technical viewer */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #05050A;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #0A1128;
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #00E5FF;
+}
+
