@@ -656,6 +656,24 @@ const PORTFOLIO_PROJECTS = [
       '/google reviews reporting/google reviews reporting1.png',
       '/google reviews reporting/google reviews reporting2.png'
     ]
+  },
+  {
+    id: 'voice-agent',
+    title: 'Aura AI Voice Agent',
+    tagline: 'REAL-TIME MULTI-AGENT VOICE AUTOMATION & METRICS',
+    category: 'Automations',
+    description: 'An ultra-low latency, multi-agent voice receptionist platform and real-time utilization dashboard powered by Gemini Live WebSockets. It isolates domain configurations for clinic, pharmacy, and mobile hardware repair services, enabling automated reservations, live catalog queries, and intelligent operator escalations.',
+    stack: ['React', 'Node.js', 'WebSockets', 'Gemini Live API', 'Express', 'Tailwind CSS'],
+    features: [
+      'Dual-mode interface: Real-time agent workspaces and live utilization analytics dashboard',
+      'Isolated LLM personality routing (Clinic Clara, Pharmacy Phoebe, Mobile Klinik Ryder)',
+      'Dynamic service catalog sync importing 390+ hardware repair price configurations from Excel databases',
+      'Real-time call KPIs, active tool execution frequencies, and live session transcript monitors'
+    ],
+    folder: 'voice agent',
+    images: [
+      '/voice agent/voice agent.png'
+    ]
   }
 ];
 
