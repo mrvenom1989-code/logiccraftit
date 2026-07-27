@@ -28,7 +28,7 @@ This document outlines the complete architectural design, legal compliance frame
   5. *How We Use Information* (Service delivery, diagnostics, security)
   6. *Third-Party AI & Infrastructure* (OpenAI API, Render, Vercel, Supabase, Stripe, Razorpay)
   7. *Data Security & Retention* (TLS 1.3 in-transit, AES-256 at-rest encryption)
-  8. *Your Privacy Rights & Choices* (GDPR / CCPA / IT Rules compliance, data deletion & opt-out controls)
+  8. *Your Privacy Rights & Choices* (GDPR / CCPA / IT Rules compliance, explicit Account & Data Deletion Instructions via email request to `logiccraftit@gmail.com` with 7-day purge SLA, permission opt-out controls)
   9. *Children's Privacy* (COPPA compliance)
   10. *Contact & DPA Requests* (`logiccraftit@gmail.com`)
 

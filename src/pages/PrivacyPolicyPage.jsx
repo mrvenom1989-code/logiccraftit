@@ -391,6 +391,12 @@ const PrivacyPolicyPage = () => {
                   <span className="text-electric-cyan">Via Device Settings</span>
                 </div>
               </div>
+              <div className="bg-void-black/70 border border-slate-800 p-4 rounded-xl font-sans text-xs text-slate-400 space-y-1.5 mt-3">
+                <strong className="text-ice-white block">Account & Data Deletion Instructions:</strong>
+                <p>
+                  To request the permanent deletion of your account profile, credentials, translation history, and saved bookmarks, please email <a href="mailto:logiccraftit@gmail.com" className="text-electric-cyan hover:underline font-mono">logiccraftit@gmail.com</a> with the subject line <code className="text-electric-cyan font-mono bg-slate-900 px-1.5 py-0.5 rounded">Account Deletion Request</code>. All associated user data and account records will be permanently purged within 7 business days.
+                </p>
+              </div>
             </section>
 
             {/* Section 9: Children's Privacy */}

@@ -30,6 +30,7 @@ This document captures technical patterns, architectural decisions, hardware per
 
 ## 3. Legal & App Store Compliance Patterns
 * **Multi-Product Privacy Policy**: Maintain a centralized Master Privacy Policy at `/privacy` covering both AI Voice Translators (ephemeral audio streams, zero public AI model training retention) and enterprise software systems (OTP authentication, multi-currency billing in INR/USD/CAD/GBP/EUR/AUD, Supabase encrypted databases, Stripe/Razorpay gateways).
+* **Account & Data Deletion Standard**: Google Play Console & Apple App Store policies require explicit account deletion instructions within the Privacy Policy. Include a dedicated highlight box specifying contact methods (`logiccraftit@gmail.com`), subject line (`Account Deletion Request`), purged data scope (credentials, history, bookmarks), and SLA turnaround time (e.g. 7 business days).
 * **Navigation Index**: Implement a sticky sidebar with smooth section jumping to ensure high usability and instant auditing during app store reviews.
 
 ---
