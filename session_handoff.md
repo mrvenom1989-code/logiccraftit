@@ -1,60 +1,73 @@
-# Session Handoff: Client Portfolio Showcase & Cyber Noise Overlay
+# Session Handoff: Logic Craft IT Master Privacy Policy & Vaacha AI Translator Integration
 
-This document outlines the design, implementation, and verification steps taken to integrate the client portfolio ("System Archive") and the global noise overlay on the **Logic Craft IT** landing page.
-
----
-
-## 1. Project Overview & Current Status
-
-* **Goal**: Update the landing page to feature five recent client systems with a high-fidelity filterable grid, a responsive screenshot gallery modal, and a global subtle noise overlay texture.
-* **Status**: **100% Complete**.
-  - All 5 projects are mapped with custom titles, taglines, detailed feature specs, and compiled stack lists in the correct order.
-  - The portfolio grid supports category filters (*Clinic Suites*, *Automations*, *Software Systems*) with dynamic layout updates.
-  - An interactive visual explorer modal (`SystemArchiveViewer`) enables users to cycle through screenshot assets using mouse clicks, arrow keys, and thumbnail strips.
-  - Fixed mobile layout issues by reordering flex axes (`flex-col-reverse`) and setting proper min-height boundaries to ensure gallery screenshots render perfectly on narrow screens.
-  - Added a global `0.04` opacity noise texture via inline SVG.
-  - Code changes compiled cleanly and were pushed to GitHub (`main` branch, commit `46c7832`).
+This document outlines the complete architectural design, legal compliance frameworks, component implementations, and verification steps completed for **Logic Craft IT** (`https://www.logiccraftit.com/`).
 
 ---
 
-## 2. Completed Actions
+## 1. Executive Summary & Status
 
-### A. Global Styles Configuration
-* **File Modified**: [index.css](file:///c:/Users/Gaurav/logiccraftit/src/index.css)
-* **Added Rules**:
-  - `.noise-overlay`: Absolute/fixed overlay settings to render turbulence filters.
-  - `.custom-scrollbar`: Monospace scrollbar custom styling matching the Deep Cyber Luxe color scheme.
-
-### B. Core Navigation & Component Implementations
-* **File Modified**: [LandingPage.jsx](file:///c:/Users/Gaurav/logiccraftit/src/pages/LandingPage.jsx)
-* **Navbar Update**: Extended navigation links to map `'Portfolio'` to `#portfolio`.
-* **Dataset Declaration**: Initialized `PORTFOLIO_PROJECTS` with the user-specified order:
-  1. *Ayurved Clinic Management*
-  2. *Solar Installation Project Management*
-  3. *Homeopathy Clinic Management*
-  4. *Automated Item Price Update*
-  5. *Google Reviews Reporting*
-  6. *Aura AI Voice Agent*
-  7. *Vaacha AI Voice Translator*
-* **Portfolio Component**: Created a filterable grid displaying browser mockups, overlay badges, descriptions, stack items, and hover animations.
-* **SystemArchiveViewer Component**: Created the modal interface combining rich details (left column) and an interactive screenshot explorer (right column).
-  - Pinned gallery to the top on mobile (`flex-col-reverse`) and details at the bottom.
-  - Utilized `encodeURI` for rendering paths with spaces.
-* **Root Integration**: Declared state management for modal triggers and rendered the noise filter inline at the top of the root page wrapper.
+* **Project Scope**:
+  1. Build a production-ready **Master Privacy Policy Page** fulfilling Apple App Store, Google Play Console, and Web deployment requirements for AI Voice Translators and enterprise software.
+  2. Implement a dedicated, auto-syncing **Vaacha AI Voice Translator Embedded Application Route** under `https://www.logiccraftit.com/vaacha`.
+  3. Integrate **Vaacha AI Voice Translator** into the client portfolio showcase with official branding assets and interactive launch CTAs.
+  4. Standardize the official domain across all components to `https://www.logiccraftit.com/`.
+* **Status**: **100% Complete & Pushed to GitHub (`main` branch)**.
 
 ---
 
-## 3. Verification Details
+## 2. Implemented Components & Routes
 
-* **Production Compilation**: Checked bundling via `npm run build` with zero errors.
-* **Interactive Testing**: Checked interactions on desktop and mobile viewports:
-  - Validated category tab clicks and active card filtering.
-  - Validated modal opening, closing, gallery cycling, thumbnail click events, and keyboard esc/arrow listeners.
-  - Confirmed screenshots are fully visible and not cropped on mobile screens.
+### A. Master Privacy Policy Page
+* **Source File**: [PrivacyPolicyPage.jsx](file:///c:/Users/aquri/logiccraftit/src/pages/PrivacyPolicyPage.jsx)
+* **Routes**: `/privacy`, `/privacy-policy`
+* **Key Sections Covered**:
+  1. *Overview & Scope* (Universal coverage across all Logic Craft IT products)
+  2. *Information We Collect* (Media input, 6-digit OTP verification codes, account profiles, multi-currency billing logs)
+  3. *AI & Voice Translation Data Handling* (Ephemeral in-memory audio processing, zero public AI model training retention policy, local device history control)
+  4. *Device Permissions* (`RECORD_AUDIO`, `INTERNET`, Storage)
+  5. *How We Use Information* (Service delivery, diagnostics, security)
+  6. *Third-Party AI & Infrastructure* (OpenAI API, Render, Vercel, Supabase, Stripe, Razorpay)
+  7. *Data Security & Retention* (TLS 1.3 in-transit, AES-256 at-rest encryption)
+  8. *Your Privacy Rights & Choices* (GDPR / CCPA / IT Rules compliance, data deletion & opt-out controls)
+  9. *Children's Privacy* (COPPA compliance)
+  10. *Contact & DPA Requests* (`logiccraftit@gmail.com`)
+
+### B. Vaacha Live Embedded Application Page
+* **Source File**: [VaachaAppPage.jsx](file:///c:/Users/aquri/logiccraftit/src/pages/VaachaAppPage.jsx)
+* **Routes**: `/vaacha`, `/translator`, `/vaacha-translator`
+* **Features**:
+  * **Branded Header Control Bar**: Renders official Vaacha Logo ([public/vaachalogobg.png](file:///c:/Users/aquri/logiccraftit/public/vaachalogobg.png)), quick home link, and live deployment badge (`v2.4.0 Auto-Sync`).
+  * **Microphone Hardware Permissions**: Embedded via iframe with explicit hardware permissions:
+    `allow="microphone; autoplay; clipboard-write; encrypted-media; camera; display-capture;"`
+  * **Zero Domain Cost Auto-Sync**: Points directly to Vercel production deployment (`https://ai-translator-woad-three.vercel.app/`), ensuring all future Vercel deployments update automatically on `logiccraftit.com/vaacha`.
+  * **Toolbar Actions**: "Refresh Workspace", "Privacy Policy", and "Standalone Tab Launch".
+
+### C. Client Portfolio & System Archive Updates
+* **Source File**: [LandingPage.jsx](file:///c:/Users/aquri/logiccraftit/src/pages/LandingPage.jsx)
+* **Portfolio Dataset Entry**:
+  * **Title**: *Vaacha AI Voice Translator Platform*
+  * **Tagline**: *REAL-TIME MULTILINGUAL VOICE ENGINE & MULTI-CURRENCY PAYMENTS*
+  * **Category**: *Automations*
+  * **Stack**: `React`, `Node.js`, `Express`, `Capacitor`, `Supabase`, `Stripe`, `Razorpay`, `Tailwind CSS`
+  * **Features**: Multi-currency regional billing (INR ₹, USD $, CAD $, GBP £, EUR €, AUD $), 6-digit OTP verification, native Android/iOS Capacitor wrappers + Web app.
+  * **Launch CTA**: Integrated "Launch Live Workspace (`/vaacha`)" button inside the `SystemArchiveViewer` modal.
 
 ---
 
-## 4. Next Steps
+## 3. Deployment URLs & App Store Credentials
 
-1. **Production Deployment**: Push changes to your hosting provider (e.g., Vercel, Netlify) to update the live deployment.
-2. **Additional Asset Management**: If new screenshots or descriptions are added to these folders, simply append them to the `PORTFOLIO_PROJECTS` array in `LandingPage.jsx`.
+* **Official App URL**: `https://www.logiccraftit.com/vaacha`
+* **Official Privacy Policy URL**: `https://www.logiccraftit.com/privacy`
+* **Direct Vercel Production Deployment**: `https://ai-translator-woad-three.vercel.app/`
+* **Official Support Email**: `logiccraftit@gmail.com`
+
+---
+
+## 4. GitHub Commits & Build Verification
+
+* **Build Status**: Verified production bundling via `npm run build` (`✓ built in 1.32s`, 0 errors).
+* **GitHub Repository**: `https://github.com/mrvenom1989-code/logiccraftit.git`
+* **Branch**: `main`
+* **Commits**:
+  * `46c7832`: `feat: add Privacy Policy page and Vaacha AI Translator`
+  * `4ff529d`: `docs: update session handoff commit hash`
