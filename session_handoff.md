@@ -71,3 +71,4 @@ This document outlines the complete architectural design, legal compliance frame
 * **Commits**:
   * `46c7832`: `feat: add Privacy Policy page and Vaacha AI Translator`
   * `4ff529d`: `docs: update session handoff commit hash`
+  * `02cd992`: `feat: add explicit account deletion instructions to Privacy Policy`
