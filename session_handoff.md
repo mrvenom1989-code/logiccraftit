@@ -13,7 +13,7 @@ This document outlines the design, implementation, and verification steps taken 
   - An interactive visual explorer modal (`SystemArchiveViewer`) enables users to cycle through screenshot assets using mouse clicks, arrow keys, and thumbnail strips.
   - Fixed mobile layout issues by reordering flex axes (`flex-col-reverse`) and setting proper min-height boundaries to ensure gallery screenshots render perfectly on narrow screens.
   - Added a global `0.04` opacity noise texture via inline SVG.
-  - Code changes compiled cleanly and were pushed to GitHub (`main` branch, commit `f77141b`).
+  - Code changes compiled cleanly and were pushed to GitHub (`main` branch, commit `46c7832`).
 
 ---
 
