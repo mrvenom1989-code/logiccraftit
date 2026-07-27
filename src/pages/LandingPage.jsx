@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Terminal, Database, Server, Cpu, Layers, Box, Code, Rocket, ChevronRight, Mail } from 'lucide-react';
@@ -517,7 +518,7 @@ const Footer = () => {
        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-xs font-mono text-slate-600 pt-8">
           <div>© {new Date().getFullYear()} Logic Craft IT.</div>
           <div className="mt-4 md:mt-0 flex gap-4">
-            <a href="#" className="hover:text-electric-cyan transition-colors">Privacy</a>
+            <Link to="/privacy" className="hover:text-electric-cyan transition-colors">Privacy Policy</Link>
             <a href="#" className="hover:text-electric-cyan transition-colors">Terms</a>
           </div>
        </div>
@@ -674,6 +675,28 @@ const PORTFOLIO_PROJECTS = [
     images: [
       '/voice agent/voice agent.png'
     ]
+  },
+  {
+    id: 'vaacha-translator',
+    title: 'Vaacha AI Voice Translator Platform',
+    tagline: 'REAL-TIME MULTILINGUAL VOICE ENGINE & MULTI-CURRENCY PAYMENTS',
+    category: 'Automations',
+    description: 'A high-performance, real-time AI voice translation platform engineered for seamless multilingual audio translation, speech recognition, multi-currency recharge gateways, and cross-platform mobile deployments.',
+    stack: ['React', 'Node.js', 'Express', 'Capacitor', 'Supabase', 'Stripe', 'Razorpay', 'Tailwind CSS'],
+    features: [
+      'Real-time bidirectional speech translation & low-latency voice synthesis engine',
+      'Multi-currency regional pricing & billing system (INR, USD, CAD, GBP, EUR, AUD)',
+      'Backend-admin 6-digit OTP verification & secure Supabase profile sync',
+      'Cross-platform architecture: Native Android & iOS Capacitor wrappers + Web app'
+    ],
+    folder: 'Vaacha AI Translator',
+    logo: '/vaachalogobg.png',
+    liveUrl: '/vaacha',
+    images: [
+      '/Vaacha AI Translator/translator.png',
+      '/Vaacha AI Translator/translator1.png',
+      '/Vaacha AI Translator/translator2.png'
+    ]
   }
 ];
 
@@ -748,7 +771,7 @@ const Portfolio = ({ onOpenProject }) => {
                   <div className="w-2.5 h-2.5 rounded-full bg-slate-800" />
                 </div>
                 <div className="text-[10px] font-mono text-slate-600 truncate max-w-[150px]">
-                  {project.id}.logiccraft.it
+                  {project.id}.logiccraftit.com
                 </div>
                 <div className="w-10" />
               </div>
@@ -893,6 +916,18 @@ const SystemArchiveViewer = ({ project, onClose }) => {
                 </span>
               ))}
             </div>
+
+            {project.liveUrl && (
+              <div className="mt-6">
+                <Link
+                  to={project.liveUrl}
+                  className="inline-flex items-center justify-center gap-2 w-full font-mono text-xs font-bold text-void-black bg-electric-cyan hover:bg-cyan-300 py-3 px-4 rounded-xl transition-all shadow-[0_0_20px_rgba(0,229,255,0.2)] hover:scale-[1.01]"
+                >
+                  <Rocket size={15} />
+                  <span>Launch Live Workspace ({project.liveUrl})</span>
+                </Link>
+              </div>
+            )}
           </div>
         </div>
 

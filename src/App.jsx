@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import VaachaAppPage from './pages/VaachaAppPage';
 import AdminLayout from './admin/AdminLayout';
 import LoginPage from './admin/LoginPage';
 import InquiriesPage from './admin/InquiriesPage';
@@ -15,6 +17,11 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/privacy" element={<PrivacyPolicyPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+        <Route path="/vaacha" element={<VaachaAppPage />} />
+        <Route path="/vaacha-translator" element={<VaachaAppPage />} />
+        <Route path="/translator" element={<VaachaAppPage />} />
         
         <Route path="/admin/login" element={<LoginPage />} />
         <Route path="/admin" element={<AdminLayout />}>
